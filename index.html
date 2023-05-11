@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Költségvetés Kisokos</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <div class="total-amount-container">
+                    <h3>Költségvetés</h3>
+                    <p class="hide error" id="budget-error">
+                        Az érték nem lehet üres, sem negatív!
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Add meg a teljes költségvetés nagyságát">
+                    <button class="submit" id="total-amount-button">
+                        Beállítás
+                    </button>
+                </div>
+
+                <div class="user-amount-container">
+                    <h3>Kiadások</h3>
+                    <p class="hide error" id="product-title-error">
+                        Mindkét mezőt töltsd ki!
+                    </p>
+                    <input type="text" class="product-title" id="product-title" placeholder="Add meg a termék nevét">
+                    <input type="number" id="user-amount" placeholder="Add meg a termék árát">
+                    <button class="submit" id="check-amount">Hozzáadás a listához</button>
+                </div>
+            </div>
+
+            <div class="output-container flex-space">
+                <div>
+                    <p>Teljes költségvetés</p>
+                    <span id="amount">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <p>Kiadások</p>
+                    <span id="expenditure-value">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <p>Egyenleg</p>
+                    <span id="balance-amount">
+                        0
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <h3>Kiadások Listája</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
